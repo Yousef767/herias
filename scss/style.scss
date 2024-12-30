@@ -8,11 +8,19 @@ $blackText: #363636;
 $darkBlackMain: #1c1e22;
 $shadow: rgba(0, 0, 0, 0.05);
 
+@font-face {
+  font-family: 'Times-Roman';
+  src: url('./OPTITimes-Roman.otf') format('otf'),;
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", serif;
+  font-family: Times-Roman, sans-serif;
+  // font-family: Poppins,serif;
 }
 
 ::selection {
@@ -218,6 +226,9 @@ nav {
     position: absolute;
     color: #3176b1;
     font-size: 0.9rem;
+    h3{
+      display: inline;
+    }
     span {
       color: $latte;
     }
@@ -725,6 +736,8 @@ footer {
     color: $main;
     flex-direction: column;
     text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
     &::after {
       content: "";
       width: 100%;
@@ -1034,7 +1047,7 @@ footer {
 
 .copyInner {
   @include flex();
-  padding-top: 80px;
+  padding-top: 40px;
   .copy {
     width: 100%;
     text-align: center;
@@ -1055,6 +1068,7 @@ footer {
   }
   p {
     font-size: 1.1rem;
+    color: #8d8d8d;
   }
 }
 @media (max-width: 550px) {
@@ -1074,14 +1088,16 @@ footer {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 20px;
   .catItem {
-    width: 400px;
+    width: 300px;
     @media (max-width: 500px) {
       width: 100%;
     }
-    img {
-      height: 250px;
+    .catImageItem{
+      height: 200px;
     }
+
   }
 }
 .btnsFixed{
@@ -1103,5 +1119,16 @@ footer {
       color: #fff;
       font-size: 1.3rem;
     }
+  }
+}
+.logos{
+  gap: 20px;
+  flex-wrap: wrap;
+  @include flex();
+  padding-top: 80px;
+  img{
+    max-width: 130px;
+    height: auto;
+    object-fit: contain;
   }
 }
