@@ -199,13 +199,14 @@ nav marquee {
   width: 100%;
   position: absolute;
   color: #3176b1;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 nav marquee h3 {
   display: inline;
 }
 nav marquee span {
   color: #ef762f;
+  font-weight: 500;
 }
 
 .goTop {
@@ -271,8 +272,8 @@ nav marquee span {
 .link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 0.9em;
-  font-weight: 500;
+  font-size: 0.94em;
+  font-weight: 700;
   color: #173f84;
   text-transform: capitalize;
 }
@@ -628,7 +629,11 @@ footer {
   height: 0;
   overflow: visible;
   padding: 0;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+.media span {
+  color: #3176b1;
 }
 .media a {
   display: flex;
@@ -692,7 +697,7 @@ footer {
 }
 
 .container {
-  padding: 130px 0 70px 0;
+  padding: 100px 0 70px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -835,6 +840,7 @@ footer {
 .catItem p {
   color: #677077;
   padding-top: 10px;
+  text-align: center;
 }
 
 .flex {
@@ -1047,8 +1053,9 @@ footer {
   color: #173f84;
 }
 .cardsText p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #8d8d8d;
+  font-weight: 500;
 }
 
 @media (max-width: 550px) {
@@ -1065,7 +1072,6 @@ footer {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 20px;
 }
 .catItems .catItem {
   width: 300px;
