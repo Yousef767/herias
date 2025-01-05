@@ -288,16 +288,7 @@ nav {
   list-style: none;
   gap: 15px;
 }
-.link {
-  width: fit-content;
-  font-size: 0.94em;
-  font-weight: 700;
-  color: $main;
-  text-transform: capitalize;
-  img {
-    width: 7px;
-  }
-}
+
 .pr {
   position: relative;
 }
@@ -310,8 +301,11 @@ nav {
   flex-direction: column;
   height: 90px;
   gap: 5px;
+  color: $main;
   transition: 0.2s;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: .9rem;
+  text-transform: capitalize;
   &::after {
     content: "";
     height: 3px;
@@ -541,9 +535,6 @@ footer {
         color: #3176b1;
         text-transform: uppercase;
         transition: 0.2s all ease;
-        &:hover{
-          color: $latte;
-        }
         img {
           width: 8px;
           object-fit: contain;
@@ -630,14 +621,16 @@ footer {
 }
 .media {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   height: 0;
   overflow: visible;
   padding: 0;
   align-items: center;
-  margin-top: 20px;
-  span{
+  span,li{
+    width: 100%;
     color: #3176b1;
+    text-align: left;
   }
   a {
     display: flex;
@@ -692,6 +685,12 @@ footer {
       transition: 200ms all ease;
     }
   }
+}
+.df{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+
 }
 @media (max-width: 1001px) {
   .footer {
@@ -831,7 +830,6 @@ footer {
 .catItem {
   width: 100%;
   border-radius: 13px;
-  cursor: pointer;
   .catImageItem{
     width: 100%;
     height: 250px;
@@ -1128,3 +1126,69 @@ footer {
     }
   }
 }
+.logos{
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  @include flex();
+  padding-top: 80px;
+  img{
+    max-width: 150px;
+    max-height: 70px;
+    object-fit: contain;
+  }
+}
+
+
+        /* Fixed Controller with Orange Line */
+        .controller-wrapper {
+          position: fixed;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          display: none;
+          
+          flex-direction: row;
+          align-items: center;
+          gap: 10px; /* Spacing between the line and the controller */
+          z-index: 1000;
+      }
+
+     
+
+      .controller {
+          
+          border-radius: 8px;
+          
+         background-color: #ffffff;
+         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+      }
+
+      .controller a {
+          text-decoration: none;
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          color: white;
+          background-color: #173f84; /* Button color */
+          border-radius: 4px;
+          padding: 10px 15px;
+          transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .controller a:hover {
+          background-color: #ff7e29; /* Highlight color */
+          transform: scale(1.1);
+      }
+
+      @media (max-width: 1150px) {
+        .controller-wrapper {
+            display: none !important; /* Force hiding on mobile */
+        }
+    }

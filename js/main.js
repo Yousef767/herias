@@ -24,9 +24,11 @@ menu.addEventListener("click", () => {
   nav.classList.toggle("activeMenu");
 });
 
+
 let lastScrollPosition = 0;
 
 window.addEventListener("scroll", () => {
+  const controller = document.getElementById("controller");
   const footer = document.querySelector("footer");
   const btnsFixed = document.querySelector(".btnsFixed");
   const footerOffsetTop = footer.offsetTop;
@@ -37,7 +39,7 @@ window.addEventListener("scroll", () => {
     if (scrollY + windowHeight >= footerOffsetTop) {
       btnsFixed.style.display = "none";
     } else {
-      // Check if the user is scrolling up
+  
       if (scrollY < lastScrollPosition) {
         btnsFixed.style.display = "flex";
       } else {
@@ -46,6 +48,14 @@ window.addEventListener("scroll", () => {
     }
   }
 
+  if (controller) {
+    const scrollableHeight = document.documentElement.scrollHeight - windowHeight;
+    if (scrollY > scrollableHeight * 0.2) {
+      controller.style.display = "block";
+    } else {
+      controller.style.display = "none";
+    }
+  }
+
   lastScrollPosition = scrollY;
-  
 });
