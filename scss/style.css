@@ -813,6 +813,7 @@ footer {
 .catItem {
   width: 100%;
   border-radius: 13px;
+  cursor: pointer;
 }
 .catItem .catImageItem {
   width: 100%;
