@@ -1128,13 +1128,15 @@ footer {
   }
 }
 .logos{
+  max-width: 1000px;
+  margin: 0 auto;
   gap: 20px;
   flex-wrap: wrap;
   @include flex();
   padding-top: 80px;
   img{
     max-width: 130px;
-    height: auto;
+    max-height: 60px;
     object-fit: contain;
   }
 }

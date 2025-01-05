@@ -9,13 +9,13 @@ links.forEach((e) => {
   });
 });
 
-let drop = document.querySelectorAll(".drop");
+// let drop = document.querySelectorAll(".drop");
 
-drop.forEach((e) => {
-  e.addEventListener("click", () => {
-    e.classList.toggle("active");
-  });
-});
+// drop.forEach((e) => {
+//   e.addEventListener("click", () => {
+//     e.classList.toggle("active");
+//   });
+// });
 
 let nav = document.querySelector("nav");
 let menu = document.querySelector(".menu");
@@ -24,18 +24,28 @@ menu.addEventListener("click", () => {
   nav.classList.toggle("activeMenu");
 });
 
-let passowrdsShowIcons = document.querySelectorAll("#passwordShow");
-if (passowrdsShowIcons) {
-  passowrdsShowIcons.forEach((e) => {
-    e.addEventListener("click", () => {
-      e.parentElement.classList.toggle('showPassword');
-      if (e.parentElement.classList.contains("showPassword")) {
-        e.className = "fa-light fa-eye";
-        e.previousElementSibling.setAttribute("type", "text");
+let lastScrollPosition = 0;
+
+window.addEventListener("scroll", () => {
+  const footer = document.querySelector("footer");
+  const btnsFixed = document.querySelector(".btnsFixed");
+  const footerOffsetTop = footer.offsetTop;
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+
+  if (btnsFixed) {
+    if (scrollY + windowHeight >= footerOffsetTop) {
+      btnsFixed.style.display = "none";
+    } else {
+      // Check if the user is scrolling up
+      if (scrollY < lastScrollPosition) {
+        btnsFixed.style.display = "flex";
       } else {
-        e.className = "fa-light fa-eye-slash";
-        e.previousElementSibling.setAttribute("type", "password");
+        btnsFixed.style.display = "none";
       }
-    });
-  });
-}
+    }
+  }
+
+  lastScrollPosition = scrollY;
+  
+});
