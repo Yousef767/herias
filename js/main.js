@@ -39,23 +39,24 @@ window.addEventListener("scroll", () => {
     if (scrollY + windowHeight >= footerOffsetTop) {
       btnsFixed.style.display = "none";
     } else {
-  
-      if (scrollY < lastScrollPosition) {
-        btnsFixed.style.display = "flex";
-      } else {
-        btnsFixed.style.display = "none";
-      }
+      btnsFixed.style.display = "flex";
+
     }
   }
 
+  // Show the controller when scrolled over 20%
   if (controller) {
     const scrollableHeight = document.documentElement.scrollHeight - windowHeight;
-    if (scrollY > scrollableHeight * 0.2) {
+    const startThreshold = scrollableHeight * 0.2;
+    const endThreshold = scrollableHeight * 0.8;
+  
+    if (scrollY > startThreshold && scrollY < endThreshold) {
       controller.style.display = "block";
     } else {
       controller.style.display = "none";
     }
   }
+  
 
   lastScrollPosition = scrollY;
 });
