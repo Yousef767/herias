@@ -202,6 +202,7 @@ nav marquee {
   color: #3176b1;
   font-size: 1rem;
   font-weight: 700;
+  z-index: 10;
 }
 
 nav marquee h3 {
@@ -269,14 +270,14 @@ nav marquee span {
 
 .links {
   display: flex;
-  height: 90px;
+  height: 80px;
   z-index: 4;
-  padding-top: 5px;
 }
 
 .mainLinks {
   display: flex;
   list-style: none;
+  align-items: center;
   gap: 15px;
 }
 
@@ -307,6 +308,7 @@ nav marquee span {
   height: 90px;
   gap: 5px;
   transition: 0.2s;
+  margin-bottom: 10px;
 }
 
 .link::after {
@@ -419,9 +421,9 @@ nav marquee span {
     flex-direction: column;
     position: fixed;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     overflow-y: scroll;
-    top: 90px;
+    top: 80px;
     left: -100%;
     gap: 0;
     transition: 0.4s;
@@ -449,6 +451,7 @@ nav marquee span {
   }
   .link {
     height: 30px;
+    white-space: nowrap;
   }
   .link::after {
     bottom: 0;
@@ -1616,4 +1619,17 @@ footer {
   .gallery .catItems .catItem .catImageItem {
     height: 200px;
   }
+}
+
+.contactLink {
+  display: flex;
+  background-color: #3176b1;
+  color: #fff;
+  flex-direction: row;
+  white-space: nowrap;
+  gap: 10px;
+  padding-left: 10px;
+}
+.contactLink i {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */
