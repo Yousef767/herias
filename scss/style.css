@@ -1628,7 +1628,7 @@ footer {
   flex-direction: row;
   white-space: nowrap;
   gap: 10px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 .contactLink i {
   font-size: 1.2rem;
