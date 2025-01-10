@@ -1630,8 +1630,9 @@ footer {
   white-space: nowrap;
   gap: 10px;
   padding-left: 15px;
-  padding-top: 0;
-  margin-bottom: 3px;
+  padding-top: 4px;
+  margin-bottom: 15px;
+  height: 100px;
 }
 .contactLink i {
   font-size: 1.2rem;
