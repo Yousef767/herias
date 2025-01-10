@@ -270,7 +270,7 @@ nav marquee span {
 
 .links {
   display: flex;
-  height: 80px;
+  height: 90px;
   z-index: 4;
 }
 
@@ -308,7 +308,8 @@ nav marquee span {
   height: 90px;
   gap: 5px;
   transition: 0.2s;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-top: 5px;
 }
 
 .link::after {
@@ -1629,6 +1630,8 @@ footer {
   white-space: nowrap;
   gap: 10px;
   padding-left: 15px;
+  padding-top: 0;
+  margin-bottom: 3px;
 }
 .contactLink i {
   font-size: 1.2rem;
