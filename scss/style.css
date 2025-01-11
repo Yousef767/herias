@@ -1719,4 +1719,12 @@ footer {
   .info, .form {
     width: 100%;
   }
+  .contactLink {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+  }
+}
+.pb50 {
+  padding-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */
