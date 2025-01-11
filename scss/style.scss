@@ -232,6 +232,9 @@ nav marquee {
   font-weight: 700;
   z-index: 10;
   right: 180px;
+  @media (max-width:900px) {
+    right: auto;
+  }
 }
 nav marquee h3 {
   display: inline;
