@@ -1778,10 +1778,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  height: 50px;
+  height: 53px;
   background-color: #173F84;
   color: #fff;
-  border-radius: 7px;
+  border-radius: 10px;
   gap: 10px;
   flex-grow: 1;
   font-size: 1rem;
