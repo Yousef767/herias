@@ -1733,4 +1733,64 @@ footer {
 }
 .pb50 {
   padding-bottom: 50px;
+}
+
+.cs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.cs img {
+  width: 1000px;
+}
+
+.twoBtns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.twoBtns h2 {
+  font-size: 1.2rem;
+  color: #173f84;
+  font-weight: 600;
+}
+
+.btns {
+  width: 1000px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.btns button, .btns a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  background-color: #173F84;
+  color: #fff;
+  border-radius: 7px;
+  gap: 10px;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+.btns button img, .btns a img {
+  width: 22px;
+}
+
+@media (max-width: 1050px) {
+  .btns {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .cs img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

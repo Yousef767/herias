@@ -1668,3 +1668,53 @@ footer {
 .pb50{
   padding-bottom: 50px;
 }
+.cs{
+  @include flex();
+  padding-top: 30px;
+  padding-bottom: 20px;
+  img{
+    width: 1000px;
+  }
+}
+.twoBtns{
+  width: 100%;
+  @include flex();flex-direction: column;
+  gap: 20px;
+  h2{
+    font-size: 1.2rem;
+    color: $main;
+    font-weight: 600;
+  }
+}
+.btns{
+  width: 1000px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  button,a{
+    width: fit-content;
+    @include flex();
+    padding: 0 20px;
+    height: 50px;
+    background-color: #173F84;
+    color: #fff;
+    border-radius: 7px;
+    gap: 10px;
+    flex-grow: 1;
+    font-size: 1rem;
+    img{
+      width: 22px;
+    }
+  }
+}
+@media (max-width:1050px) {
+  .btns{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .cs{
+    img{
+      width: 100%;
+    }
+  }
+}
