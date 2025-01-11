@@ -231,6 +231,7 @@ nav marquee {
   font-size: 1rem;
   font-weight: 700;
   z-index: 10;
+  right: 180px;
 }
 nav marquee h3 {
   display: inline;
@@ -1571,7 +1572,7 @@ footer {
 }
 .contactLink{
   display: flex;
-  background-color: #3176b1;
+  background-color: $latte;
   color: #fff;
   flex-direction: row;
    white-space: nowrap;
@@ -1580,8 +1581,13 @@ footer {
    padding-top: 4px;
    margin-bottom: 15px;
    height: 100px;
+   transition: .3s all ease;
    i{
+     transition: .3s all ease;
     font-size: 1.2rem;
+   }
+   &:hover{
+    background-color: #3176b1;
    }
 }
 .offwhitte{
