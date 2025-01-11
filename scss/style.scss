@@ -1702,6 +1702,10 @@ footer {
     gap: 10px;
     flex-grow: 1;
     font-size: 1rem;
+    transition: .3s all ease;
+    &:hover{
+      background-color: #3176b1;
+    }
     img{
       width: 22px;
     }
