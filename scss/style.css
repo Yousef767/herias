@@ -488,7 +488,6 @@ footer {
   padding: 50px 0;
   background-color: #fff;
   height: auto;
-  margin-top: 50px;
   border-top: 2px solid #3176b1;
 }
 
@@ -1636,4 +1635,88 @@ footer {
 }
 .contactLink i {
   font-size: 1.2rem;
+}
+
+.offwhitte {
+  background-color: #F9F9F9;
+}
+
+.form {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form input, .form textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  height: 43px;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #ccc;
+}
+.form textarea {
+  height: 150px;
+  padding: 15px;
+  resize: none;
+}
+.form button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  height: 43px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #173f84;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+  gap: 10px;
+}
+.info h1, .info h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 3px 0;
+  color: #333333;
+  text-align: center;
+}
+.info h1 {
+  font-weight: 600;
+}
+
+.infowitha {
+  font-size: 1.1rem;
+  color: #333333;
+  text-align: center;
+}
+.infowitha a {
+  color: #173f84;
+  font-weight: 600;
+  color: #173f84;
+}
+
+@media (max-width: 650px) {
+  .info, .form {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
