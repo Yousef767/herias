@@ -1478,16 +1478,19 @@ footer {
   flex-direction: column;
   padding: 10px 0;
 }
-.list ul {
+.list ul,
+.list ol {
   padding-top: 20px;
   padding-left: 20px;
 }
-.list ul li {
+.list ul li,
+.list ol li {
   padding-top: 5px;
   font-size: 1.2rem;
 }
 @media (max-width: 600px) {
-  .list ul li {
+  .list ul li,
+  .list ol li {
     font-size: 1rem;
   }
 }
@@ -1498,6 +1501,17 @@ footer {
 @media (max-width: 600px) {
   .list p {
     font-size: 1rem;
+  }
+}
+.list ol {
+  padding: 0;
+}
+.list ol li {
+  margin-left: 40px;
+}
+@media (max-width: 600px) {
+  .list ol li {
+    margin-left: 20px;
   }
 }
 
@@ -1825,4 +1839,101 @@ footer {
 }
 .line2 {
   border: 2px solid #3176b1 !important;
+}
+
+.productInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  padding-top: 50px;
+}
+.productInner .cardsText {
+  width: calc(100% - 530px);
+}
+
+.imgC {
+  display: flex;
+  align-items: flex-start;
+  width: 500px;
+  position: relative;
+}
+.imgC img {
+  position: sticky;
+  top: 120px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.imagePopUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4862745098);
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow-y: scroll;
+}
+.imagePopUp::-webkit-scrollbar {
+  width: 0;
+}
+@media (max-width: 900px) {
+  .imagePopUp {
+    align-items: center;
+  }
+}
+
+.imagePopInner {
+  width: 1200px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.imagePopInner i {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6352941176));
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.imagePopInner img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .productInner .cardsText {
+    width: calc(100% - 430px);
+  }
+  .imgC {
+    width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .productInner {
+    flex-direction: column;
+  }
+  .productInner .cardsText {
+    width: 100%;
+  }
+  .imgC {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .imgC {
+    width: 100%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */

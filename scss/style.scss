@@ -1434,7 +1434,8 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 10px 0;
-  ul {
+  ul,
+  ol {
     padding-top: 20px;
     padding-left: 20px;
     li {
@@ -1450,6 +1451,15 @@ footer {
     font-size: 1.2rem;
     @media (max-width: 600px) {
       font-size: 1rem;
+    }
+  }
+  ol {
+    padding: 0;
+    li {
+      margin-left: 40px;
+      @media (max-width: 600px) {
+        margin-left: 20px;
+      }
     }
   }
 }
@@ -1741,7 +1751,97 @@ footer {
   }
 }
 
-.line2{
+.line2 {
   border: 2px solid #3176b1 !important;
-
+}
+.productInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  .cardsText {
+    width: calc(100% - 530px);
+  }
+  padding-top: 50px;
+}
+.imgC {
+  display: flex;
+  align-items: flex-start;
+  width: 500px;
+  position: relative;
+  img {
+    position: sticky;
+    top: 120px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+.imagePopUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0000007c;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  @media (max-width: 900px) {
+    align-items: center;
+  }
+}
+.imagePopInner {
+  width: 1200px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  i {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    filter: drop-shadow(0px 0px 10px #000000a2);
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+@media (max-width: 1100px) {
+  .productInner {
+    .cardsText {
+      width: calc(100% - 430px);
+    }
+  }
+  .imgC {
+    width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .productInner {
+    flex-direction: column;
+    .cardsText {
+      width: calc(100%);
+    }
+  }
+  .imgC {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .imgC {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
