@@ -1484,7 +1484,21 @@ footer {
 }
 .list ul li {
   padding-top: 5px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 600px) {
+  .list ul li {
+    font-size: 1rem;
+  }
+}
+.list p {
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+@media (max-width: 600px) {
+  .list p {
+    font-size: 1rem;
+  }
 }
 
 .pb0 {
@@ -1649,7 +1663,7 @@ footer {
 }
 
 .offwhitte {
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .form {
@@ -1659,7 +1673,8 @@ footer {
   flex-direction: column;
   gap: 20px;
 }
-.form input, .form textarea {
+.form input,
+.form textarea {
   border: none;
   outline: none;
   background-color: transparent;
@@ -1704,7 +1719,8 @@ footer {
   padding-top: 30px;
   gap: 10px;
 }
-.info h1, .info h2 {
+.info h1,
+.info h2 {
   font-weight: 500;
   font-size: 1.3rem;
   padding: 3px 0;
@@ -1727,7 +1743,8 @@ footer {
 }
 
 @media (max-width: 650px) {
-  .info, .form {
+  .info,
+  .form {
     width: 100%;
   }
   .contactLink {
@@ -1771,7 +1788,8 @@ footer {
   gap: 20px;
   align-items: center;
 }
-.btns button, .btns a {
+.btns button,
+.btns a {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -1779,7 +1797,7 @@ footer {
   align-items: center;
   padding: 0 20px;
   height: 53px;
-  background-color: #173F84;
+  background-color: #173f84;
   color: #fff;
   border-radius: 10px;
   gap: 10px;
@@ -1787,10 +1805,12 @@ footer {
   font-size: 1rem;
   transition: 0.3s all ease;
 }
-.btns button:hover, .btns a:hover {
+.btns button:hover,
+.btns a:hover {
   background-color: #3176b1;
 }
-.btns button img, .btns a img {
+.btns button img,
+.btns a img {
   width: 22px;
 }
 
@@ -1802,4 +1822,7 @@ footer {
   .cs img {
     width: 100%;
   }
+}
+.line2 {
+  border: 2px solid #3176b1 !important;
 }/*# sourceMappingURL=style.css.map */
