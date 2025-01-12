@@ -24,18 +24,8 @@ menu.addEventListener("click", () => {
   nav.classList.toggle("activeMenu");
 });
 
-let passowrdsShowIcons = document.querySelectorAll("#passwordShow");
-if (passowrdsShowIcons) {
-  passowrdsShowIcons.forEach((e) => {
-    e.addEventListener("click", () => {
-      e.parentElement.classList.toggle('showPassword');
-      if (e.parentElement.classList.contains("showPassword")) {
-        e.className = "fa-light fa-eye";
-        e.previousElementSibling.setAttribute("type", "text");
-      } else {
-        e.className = "fa-light fa-eye-slash";
-        e.previousElementSibling.setAttribute("type", "password");
-      }
-    });
-  });
-}
+const fixedBtns = document.querySelectorAll(".btnsFixed a");
+fixedBtns[2].href = "js:;";
+fixedBtns[2].addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
