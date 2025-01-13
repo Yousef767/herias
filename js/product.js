@@ -1,13 +1,16 @@
-const imgC = document.querySelector(".imgC img");
+const imgC = document.querySelectorAll(".imgC img");
 const imagePopUp = document.querySelector(".imagePopUp");
 const imageP = document.querySelector(".imagePopInner img");
 const x = document.querySelector(".imagePopInner i");
 
-imgC.addEventListener("click", () => {
-  imageP.src = imgC.src;
-  imagePopUp.style.display = "flex";
-  document.body.style.overflow = "hidden";
-});
+imgC.forEach((e)=>{
+  e.addEventListener("click", () => {
+    imageP.src = e.src;
+    imagePopUp.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+
+})
 x.addEventListener("click", () => {
   imagePopUp.style.display = "none";
   document.body.style.overflow = "initial";

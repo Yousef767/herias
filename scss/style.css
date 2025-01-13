@@ -1384,6 +1384,9 @@ footer {
 .mainColor {
   color: #173f84 !important;
 }
+.mainColor a {
+  color: inherit;
+}
 
 .orColor {
   color: #ef762f !important;
@@ -1852,17 +1855,34 @@ footer {
   width: calc(100% - 530px);
 }
 
+.proiS {
+  width: 500px;
+  position: sticky;
+  top: 120px;
+}
+.proiS .swiper-pagination-bullet {
+  background-color: #fff;
+  transition: 0.2s all ease;
+}
+.proiS .swiper-pagination-bullet-active {
+  background-color: #3176b1;
+  opacity: 1;
+}
+
 .imgC {
   display: flex;
   align-items: flex-start;
-  width: 500px;
   position: relative;
 }
 .imgC img {
-  position: sticky;
-  top: 120px;
   width: 100%;
   cursor: pointer;
+}
+
+.flexstretch {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
 }
 
 .imagePopUp {
@@ -1915,7 +1935,7 @@ footer {
   .productInner .cardsText {
     width: calc(100% - 430px);
   }
-  .imgC {
+  .proiS {
     width: 400px;
   }
 }
@@ -1926,13 +1946,13 @@ footer {
   .productInner .cardsText {
     width: 100%;
   }
-  .imgC {
+  .proiS {
     width: 500px;
     margin: 0 auto;
   }
 }
 @media (max-width: 600px) {
-  .imgC {
+  .proiS {
     width: 100%;
     margin: 0 auto;
   }

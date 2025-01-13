@@ -13,6 +13,17 @@ var swiper = new Swiper(".swiperHome", {
     prevEl: ".prev",
   },
 });
+var swiper = new Swiper(".proiS", {
+  slidesPerView: 1,
+  speed:400,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 
 
 
