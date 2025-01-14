@@ -25,7 +25,7 @@ menu.addEventListener("click", () => {
 });
 
 const fixedBtns = document.querySelectorAll(".btnsFixed a");
-fixedBtns[2].href = "js:;";
-fixedBtns[2].addEventListener("click", () => {
+fixedBtns[2].addEventListener("click", (event) => {
+  event.preventDefault();
   window.scrollTo(0, 0);
 });
